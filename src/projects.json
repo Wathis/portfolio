@@ -1,0 +1,19 @@
+{
+    "projects": {
+        "Notee" : {
+            "title": "Notee",
+            "img": "url",
+            "color": "red"
+        },
+        "Vocs" : {
+            "title": "Vocs",
+            "img": "url",
+            "color": "red"
+        },
+        "Washing Machine" : {
+            "title": "Washing Machine",
+            "img": "url",
+            "color": "red"
+        }
+    }
+}

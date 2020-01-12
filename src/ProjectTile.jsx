@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core'
 
-function ProjectTile({ title, img, color, classes }) {
+function ProjectTile({ title, img, color, classes, ...other }) {
   return (
-    <div className={classes.root}>
+    <div style={{backgroundUrl: img}} className={classes.root} {...other}>
       <span className={classes.title}>{title}</span>
     </div>
   )
@@ -13,7 +13,7 @@ function ProjectTile({ title, img, color, classes }) {
 ProjectTile.propTypes = {
   title: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-  color: PropTypes.string,
+  color: PropTypes.string
 }
 
 ProjectTile.defaultProps = {
@@ -28,7 +28,8 @@ export default withStyles(theme => ({
     width: cardDimension,
     height: cardDimension,
     borderRadius: 2,
-    position: 'relative'
+    position: 'relative',
+    cursor: 'pointer'
   },
   title: {
     fontSize: '1.2em',

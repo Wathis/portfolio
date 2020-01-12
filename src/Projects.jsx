@@ -4,14 +4,19 @@ import ProjectTile from './ProjectTile';
 import { withStyles } from '@material-ui/styles';
 import Title from './Title';
 
-function Projects({ projects, classes }) {
+function Projects({ projects, classes,  }) {
+
+  const onClickProjet = () => {
+
+  };
+
   return (
     <div className={classes.root}>
       <Title className={classes.title} value="My portfolio" />
       <div className={classes.container}>
         {
-          projects.map((project) => (
-            <ProjectTile title={project.title} img={project.img} color={project.color} />
+          Object.keys(projects).map((projectName) => (
+            <ProjectTile onClick={onClickProjet} title={projects[projectName].title} img={projects[projectName].img} color={projects[projectName].color} />
           ))
         }
       </div>
